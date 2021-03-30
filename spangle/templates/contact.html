@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% block title %} contact {% endblock title %}
+
+{% block content %}
+
+{% load static %}
+<div class="col-md-5">
+    <div class="col-md rounded"  back style=" background-image: url({% static 'img/bg-01.jpg' %}) ; height: 100%;
+           padding: 0px;  ">
+        <div class="rounded" style="background:rgba(0, 0, 0, 0.404); height: 100%;">
+            <div>
+                <span class="fas fa-map-marker-alt"
+                    style="color: #fff; margin-left: 50px; margin-top: 70px; font-size: 20px;">
+                </span>
+
+                <span class="txt1 p-b-20" style="color:  #fff; margin-left: 20px; font-size: 20px;">
+                    Address
+                </span>
+                <div style=" margin-left: 85px; margin-top: 10px; text-align: left;">
+                    <p class="col-md" style="color:  rgb(182, 179, 179);">
+                        H-52, Sector - 4 ( DSIIDC ) Bawana Industrial Area New Delhi - 110039 <br> ( INDIA )
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <span class="fas fa-phone" style="color: #fff; margin-left: 50px; margin-top: 10px; font-size: 20px;">
+                </span>
+
+                <span class="txt1 p-b-20" style="color:  #fff; margin-left: 20px; font-size: 20px;">
+                    Lets Talk
+                </span>
+                <div style=" margin-left: 85px; margin-top: 10px; text-align: left;">
+                    <p class="col-md" style="color:  rgb(0, 255, 42,0.9);">
+                        +91 1140366636 <br>
+                        +91 9811983738 <br>
+                        +91 9810677086 <br>
+                        +91 9250000987
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <span class="fa fa-envelope-o" aria-hidden="true"
+                    style="color: #fff; margin-left: 50px; margin-top: 5px; font-size: 20px;">
+                </span>
+
+                <span class="txt1 p-b-20" style="color:  #fff; margin-left: 20px; font-size: 20px;">
+                    General Support
+                </span>
+                <div style=" margin-left: 85px; margin-top: 5px; text-align: left;">
+                    <p style="margin-bottom: 70px;" class="col-md"> <a href="mailto:info@spangle.in"
+                            style="color:  rgba(0, 255, 42, 0.9);">
+                            info@sapngle.in
+                        </a> </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="col-md-7 pb-4 pt-4">
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="fname">Full name *</label>
+                <input type="text" class="form-control" id="fname" name="fname" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="email">E mail *</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="phone">Phone</label>
+                <input type="number" class="form-control" id="phone">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 mb-3">
+                <label for="state">State</label>
+                <select class="custom-select" id="state">
+                    <option selected disabled value="">Choose...</option>
+                    <option>Andhra Pardesh</option>
+                    <option>Arnuachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chandigarh</option>
+                    <option>Chhattisgarh</option>
+                    <option>Dara And Daman</option>
+                    <option>Delhi</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>J & K</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Ladakh</option>
+                    <option>Lakshadweep</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Puducherry</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid state.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="zip">Zip</label>
+                <input type="text" class="form-control" id="zip">
+
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="message">Message *</label>
+                <input type="text" class="form-control" id="message" required>
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions *
+                </label>
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <button class="btn btn-primary" type="Submit">Submit form</button>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label> <h5>{{msg}}</h5> </label>
+            </div>
+
+        </div>
+    </form>
+
+
+</div>
+
+
+
+
+
+
+{% endblock content %}

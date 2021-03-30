@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block title %} puranpatra {% endblock title %}
+
+{% block content %}
+
+{% load static %} 
+      <div class="col-md-5">
+        <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class=" bg-dark active "></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1" class="bg-dark"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2" class="bg-dark"></li>
+          </ol>
+          <div class="carousel-inner rounded border bg-light" >
+
+            <div class="carousel-item active ">
+              <div >
+                <img src="{% static 'img/crusher.png' %}" class="img-fluid pb-4" alt="crusher">
+              </div>
+              <div class="carousel-caption text-dark" >
+                <h5>Crusher ( Steel Handel )</h5>               
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div>
+                <img src="{% static 'img/crusher800x800Png.png' %}" class="img-fluid pb-4"   alt="CrusherPh">
+              </div>
+              <div class="carousel-caption text-dark">
+                <h5>Crusher ( Plastic Handel )</h5>
+              
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div>
+                <img src="{% static 'img/Crusherbox800x800png.png' %}" class="img-fluid pb-4"  alt="crusher box">
+              </div>
+              <div class="carousel-caption text-dark">
+                <h5>Crusher Box</h5>               
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-md-7">
+        <h2 class="text-primary">Puran Patra ( Crusher )</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <br>
+
+
+        
+
+
+        <div class="tab-content" id="nav-tabContent">
+
+          <div class="tab-pane active" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+            <div class="table-responsive">
+              <table class="table table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Height</th>
+                    <th scope="col">Width</th>
+                    <th scope="col">Length</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Includes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+         
+        </div>
+
+
+
+      </div>  
+{% endblock content %}
