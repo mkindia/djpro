@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('spangle.urls')),
+    path('', include('spangle.urls')), # by me for spangle web site home
     path('admin/', admin.site.urls),
 ]
